@@ -19,9 +19,9 @@
   <div class="d-flex flex-column flex-md-row align-items-center p-3 mb-3 box-shadow border-bottom">
     <h1 class="my-0 mr-md-auto font-weight-normal text-danger">Not found 404</h1>
     <nav class="my-2 my-md-0 mr-md-3">
-      <a class="p-2 text-dark" href="#"><a href="trade history.html">Realized PL</a></a>
-      <a class="p-2 text-dark" href="#"><a href="trade history.html">Unrealized PL</a></a>
-      <a class="p-2 text-dark" href="#"><a href="trade history.html">Trade history</a></a>
+      <a class="p-2 text-dark" href="#"></a><a href="/trade_history">Realized PL</a>
+      <a class="p-2 text-dark" href="#"></a><a href="/trade_history">Unrealized PL</a>
+      <a class="p-2 text-dark" href="#"></a><a href="/trade_history">Trade history</a>
     </nav>
   </div>
   <div class="py-5 bg-warning h-25 text-light" style="	background-image: url(&quot;assets/ahubbleskyfu.jpg&quot;);	background-position: center;	background-size: 100%;	background-repeat: repeat;">
@@ -47,7 +47,6 @@
                 <tr>
                   <th>Items</th>
                   <th>Inventory</th>
-                  <th>Average price</th>
                   <th>RPL</th>
                   <th>URPL</th>
                 </tr>
@@ -55,27 +54,26 @@
               <tbody>
                 <tr>
                   <th>Bitcoin</th>
-                  <td>I</td>
-                  <td>A1000</td>
-                  <td>R1000</td>
-                  <td>U1000</td>
+                  <td>{{btc1}}</td>                 
+                  <td>{{btc3}}</td>
+                  <td>{{btc4}}</td>
                 </tr>
                 <tr>
                   <th>Eth</th>
-                  <td>N</td>
-                  <td>A1500</td>
-                  <td>R1500</td>
-                  <td>U1500</td>
+                  <td>{{eth1}}</td>
+                  <td>{{eth3}}</td>
+                  <td>{{eth4}}</td>
                 </tr>
                 <tr>
-                  <th scope="row" contenteditable="true">Ad</th>
-                  <td>V</td>
-                  <td>A2000</td>
-                  <td>R2000</td>
-                  <td>U2000</td>
+                  <th scope="row" contenteditable="true">Ltc</th>
+                  <td>{{ltc1}}</td>
+                  <td>{{ltc3}}</td>
+                  <td>{{ltc4}}</td>
                 </tr>
               </tbody>
             </table>
+            <button type="button" class="btn btn-lg btn-block btn-warning"><a href="/">Back to home page</a></button><br>
+            <button type="button" class="btn btn-lg btn-block btn-warning"><a href="/graph1">Profits</a></button><br>
           </div>
         </div>
       </div>

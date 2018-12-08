@@ -19,14 +19,38 @@
   <div class="d-flex flex-column flex-md-row align-items-center p-3 mb-3 box-shadow border-bottom">
     <h1 class="my-0 mr-md-auto font-weight-normal text-danger">Not found 404</h1>
     <nav class="my-2 my-md-0 mr-md-3">
-      <a class="p-2 text-dark" href="#"><a href="trade history.html">Realized PL</a></a>
-      <a class="p-2 text-dark" href="#"><a href="trade history.html">Unrealized PL</a></a>
-      <a class="p-2 text-dark" href="#"><a href="trade history.html">Trade history</a></a>
+      <a class="p-2 text-dark" href="#"></a><a href="/trade_history">Realized PL</a>
+      <a class="p-2 text-dark" href="#"></a><a href="/trade_history">Unrealized PL</a>
+      <a class="p-2 text-dark" href="#"></a><a href="/trade_history">Trade history</a>
     </nav>
   </div>
-  <div class="pt-5 text-center w-100 h-25" style="background-image: url(&quot;assets/Bitcoin-Ethereum-Litecoin-760x400.jpg&quot;); background-position: center center; background-size: 70%; background-repeat: repeat;">
+  <div class="py-5">
     <div class="container">
       <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-bordered ">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Balance</th>
+                  <th>Bitcoin</th>
+                  <th>Ethereum</th>
+                  <th>Litecoin</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>{{blc}}</th>
+                  <td>{{btc}}</td>
+                  <td>{{eth}}</td>
+                  <td>{{ltc}}</td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -51,8 +75,9 @@
             <div class="card-header">
               <h4 class="my-0 font-weight-normal">Bitcoin</h4>
             </div>
-            <div class="card-body h-50"><button type="button" class="btn btn-lg btn-block text-dark btn-warning shadow my-3"><a href="Trading Processing1.html">Buy</a></button><button type="button" class="btn btn-lg btn-block text-dark btn-warning my-3 shadow"><a href="Trading Processing2.html">Sell</a></button></div>
-            
+            <div class="card-body h-50">
+              <button type="button" class="btn btn-lg btn-block text-dark btn-warning shadow my-3"><a href="/btc_buy_page">Buy</a></button>
+              <button type="button" class="btn btn-lg btn-block text-dark btn-warning my-3 shadow"><a href="/btc_sell_page">Sell</a></button></div>
           </div>
         </div>
         <div class="col-md-4 h-75">
@@ -60,7 +85,8 @@
             <div class="card-header">
               <h4 class="my-0 font-weight-normal">Ethereum</h4>
             </div>
-            <div class="card-body h-50"><button type="button" class="btn btn-lg btn-block text-dark btn-warning shadow my-3"><a href="Trading Processing3.html">Buy</a></button><button type="button" class="btn btn-lg btn-block text-dark btn-warning my-3 shadow"><a href="Trading Processing4.html">Sell</a></button></div>
+            <div class="card-body h-50"><button type="button" class="btn btn-lg btn-block text-dark btn-warning shadow my-3"><a href="/eth_buy_page">Buy</a></button>
+              <button type="button" class="btn btn-lg btn-block text-dark btn-warning my-3 shadow"><a href="/eth_sell_page">Sell</a></button></div>
           </div>
         </div>
         <div class="col-md-4 h-50">
@@ -68,7 +94,8 @@
             <div class="card-header">
               <h4 class="my-0 font-weight-normal">Litecoin</h4>
             </div>
-            <div class="card-body h-75"><button type="button" class="btn btn-lg btn-block text-dark btn-warning shadow my-3"><a href="Trading Processing5.html">Buy</a></button><button type="button" class="btn btn-lg btn-block text-dark btn-warning my-3 shadow"><a href="Trading Processing6.html">Sell</a></button></div>
+            <div class="card-body h-75"><button type="button" class="btn btn-lg btn-block text-dark btn-warning shadow my-3"><a href="/lite_buy_page">Buy</a></button>
+              <button type="button" class="btn btn-lg btn-block text-dark btn-warning my-3 shadow"><a href="/lite_sell_page">Sell</a></button></div>
           </div>
         </div>
       </div>

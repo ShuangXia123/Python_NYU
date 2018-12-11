@@ -19,12 +19,12 @@
   <div class="d-flex flex-column flex-md-row align-items-center p-3 mb-3 box-shadow border-bottom">
     <h1 class="my-0 mr-md-auto font-weight-normal text-danger">Not found 404</h1>
     <nav class="my-2 my-md-0 mr-md-3">
-      <a class="p-2 text-dark" href="#"><a href="/trade_history">Realized PL</a></a>
-      <a class="p-2 text-dark" href="#"><a href="/trade_history">Unrealized PL</a></a>
-      <a class="p-2 text-dark" href="#"><a href="/trade_history">Trade history</a></a>
+      <a class="p-2 text-dark" href="#"></a><a href="/trade_history">Realized PL</a>
+      <a class="p-2 text-dark" href="#"></a><a href="/trade_history">Unrealized PL</a>
+      <a class="p-2 text-dark" href="#"></a><a href="/trade_history">Trade history</a>
     </nav>
   </div>
-  <div class="py-5">
+  <div class="py-5 bg-primary">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -47,7 +47,7 @@
           <h1>price:${{price}}</h1>
           <form class="form-inline d-flex justify-content-center" action="/eth_buy" method="post">
             <div class="input-group w-75"> <input type="number" class="form-control form-control-lg w-75" id="form3" name="qty">
-              <div class="input-group-append"> <button class="btn btn-warning w-100" type="submit">submit</button> </div>
+              <div class="input-group-append"> <button class="btn w-100 btn-primary" type="submit">submit</button> </div>
             </div>
           </form>
         </div>

@@ -425,18 +425,18 @@ def get_rpl():
 
 def get_upl():
     connection=get_connection()
-    sql=('select UPL from trade_record where item_id=1')
+    sql=('select UPL from trade_record where item_id=1 order by trade_id desc limit 1')
     result=connection.cmd_query(sql)
     update_upl1=connection.get_rows()
     update_upl1=float(update_upl1[0][0][0])
     update_upl1=round(update_upl1, 2)
-    sql2=('select UPL from trade_record where item_id=2')
+    sql2=('select UPL from trade_record where item_id=2 order by trade_id desc limit 1')
     result=connection.cmd_query(sql2)
     update_upl2=connection.get_rows()
     update_upl2=float(update_upl2[0][0][0])
     update_upl2=round(update_upl2, 2)
 
-    sql3=('select UPL from trade_record where item_id=3')
+    sql3=('select UPL from trade_record where item_id=3 order by trade_id desc limit 1')
     result=connection.cmd_query(sql3)
     update_upl3=connection.get_rows()
     update_upl3=float(update_upl3[0][0][0])
@@ -444,4 +444,13 @@ def get_upl():
     return update_upl1, update_upl2, update_upl3
     connection.commit()
     connection.close()
+
+@app.route ('/trade_history')
+def view_record():
+    connection=get_connection()
+    sql='select t.trade_id,i.symbol,s.side,t.quantity,t.price,t.item_value from trade_record t, trade_item i, side_table s where i.trade_item=t.trade_item and s.side_id=t.side_id'
+    result=connection.cmd_query(sql)
+    rows=connection.get_rows()
+    connection.close()
+    return render_template('trade history.html', record=rows[0])
 

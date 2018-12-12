@@ -448,7 +448,7 @@ def get_upl():
 @app.route ('/trade_history')
 def view_record():
     connection=get_connection()
-    sql='select t.trade_id,i.symbol,s.side,t.quantity,t.price,t.item_value from trade_record t, trade_item i, side_table s where i.trade_item=t.trade_item and s.side_id=t.side_id'
+    sql='select t.trade_id,i.symbol,s.side_name,t.quantity,t.price,t.item_value from trade_record t, trade_items i, side_table s where i.item_id=t.item_id and s.side_id=t.side_id'
     result=connection.cmd_query(sql)
     rows=connection.get_rows()
     connection.close()
